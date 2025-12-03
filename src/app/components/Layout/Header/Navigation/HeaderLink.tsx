@@ -16,8 +16,6 @@ const HeaderLink: React.FC<{ item: HeaderItem }> = ({ item }) => {
     setSubmenuOpen(false)
   }
 
-  console.log(path)
-
   return (
     <div
       className='relative'

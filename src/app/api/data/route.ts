@@ -16,28 +16,35 @@ const HeaderData: HeaderItem[] = [
 
 const FeaturesData: FeaturesType[] = [
   {
-    imgSrc: '/images/Features/featureOne.svg',
-    heading: 'Elegant Dining Atmosphere',
-    subheading:
-      'Enjoy a warm, refined space perfect for intimate dinners or small group gatherings.',
+    imgSrc: '/images/Features/Entspannt.svg',
+    heading: 'Entspannte Behandlung',
+    subheading: 'in Vollnarkose',
   },
   {
-    imgSrc: '/images/Features/featureThree.svg',
-    heading: 'Signature Chef Creations',
-    subheading:
-      'Taste one-of-a-kind dishes crafted with passion by our top culinary team.',
+    imgSrc: '/images/Features/Erfahrung-Angst.svg',
+    heading: 'Langjährige Erfahrung',
+    subheading:'im Umgang mit Angst',
   },
   {
-    imgSrc: '/images/Features/featureTwo.svg',
-    heading: 'Fresh, Local Ingredients',
-    subheading:
-      'We use locally sourced goods daily for unmatched taste and quality.',
+    imgSrc: '/images/Features/Soziales-Engagement.svg',
+    heading: 'Soziales Engagement',
+    subheading:'Humanismus als Prinzip',
   },
   {
-    imgSrc: '/images/Features/featureFour.svg',
-    heading: 'Hassle-Free Reservations',
+    imgSrc: '/images/Features/Digitaler-Workflow.svg',
+    heading: 'Digitaler Workflow',
     subheading:
-      'Reserve online in seconds or walk in anytime — we’re ready when you are.',
+      'für mehr Präzision',
+  },
+  {
+    imgSrc: '/images/Features/Hygiene.svg',
+    heading: 'Sehr hoher Hygienestandard',
+    subheading:'für Ihre Sicherheit',
+  },
+  {
+    imgSrc: '/images/Features/Metalfrei.svg',
+    heading: 'Metallfreie Praxis',
+    subheading:'für beste Gesundheit',
   }
 ]
 
