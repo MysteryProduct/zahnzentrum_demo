@@ -9,7 +9,7 @@ interface ModalProps {
   onClose: (open: boolean) => void
 }
 
-export default function TestModal({ openProp, onClose }: ModalProps) {
+export default function PraxisPhilosophie({ openProp, onClose }: ModalProps) {
   const [open, setOpen] = useState(openProp)
 
   const handleClose = (value: boolean) => {
@@ -36,32 +36,33 @@ export default function TestModal({ openProp, onClose }: ModalProps) {
                 <div className="sm:flex sm:items-start">
                   <div className="mt-3 sm:mt-0 sm:ml-4 sm:text-left">
                     <DialogTitle className="text-xl text-center text-base font-normal text-gray-900">
-                      Bezahlbare Medizin für Jedermann
+                      Warum sich auch Angstpatienten bei uns wohlfühlen
                     </DialogTitle>
                     <div className="mt-3">
                       <p className="text-lg text-gray-500 sm:text-start">
-                        Wir bieten ein sehr umfangreiches Behandlungsspektrum an: Alles aus einer Hand und das auf hohem Niveau unter Einsatz modernster Technik.
-                        So reicht unser Portfolio von der Vorsorge für Kinder und Erwachsene, über die erhaltende Zahnmedizin bis zur Oralchirurgie.
+                       Für uns sind alle Menschen gleich, deshalb spielt der Versicherungsstatus auch keine Rolle. 
+                       Viel wichtiger ist uns ein zuverlässiges, respektvolles und korrektes Miteinander.
                       </p>
                       <p className="text-lg text-gray-500 mt-3 sm:text-start">
-                        Und auch bei implantologischen Eingriffen sind wir gerne für Sie da.
-                        Ein besonderer Pluspunkt ist ein in die Praxis integriertes zahntechnisches Meister-Labor,
-                        das die Behandlungen für unsere Patienten noch einfacher,
-                        sicherer und zeitschonender gestaltet – und zudem die Umwelt schont.
-                        Wir verwenden moderne, allergiefreie und biokompatible Materialien.
+                        Dies ist auch der Grund für unser sehr gutes Termin-Management. 
+                        Mit über 20 Praxisjahren vertrauen uns Patienten bereits seit Generationen. Wir sind bodenständig geblieben und setzen dennoch auf Innovation:
                       </p>
 
                       <p className="text-lg text-gray-500 mt-3 sm:text-start">
-                        Als metallfreie Praxis verzichten wir ganz bewusst auf Gold und Amalgam.
-                        Zum optimalen Schutz Ihrer Gesundheit haben wir sehr hohe Hygienestandards etabliert,
-                        setzen auf innovative Technik und digitalen Workflow,
-                        wodurch sehr schonende Eingriffe möglich werden.
+                        Wir leben den volldigitalen Workflow, da wir davon überzeugt sind, dass Kompetenz, Erfahrung und Hightech die beste Kombination für eine erfolgreiche Behandlung ist.
                       </p>
 
                       <p className="text-lg text-gray-500 mt-3 sm:text-start">
-                        Diese bieten wir auch in Vollnarkose an, z.B. für Angstpatienten,
-                        bei umfassenden Versorgungen, Weisheitszahn-Entfernungen oder bei der Behandlung von Menschen mit Einschränkungen, bzw.
-                        bestimmten Krankheitsbildern.
+                        Bei aller Technik darf auch die persönliche Komponente nicht fehlen. Nachhaltigkeit, 
+                        Vertrauen und Menschlichkeit sind wichtige Aspekte unserer Arbeit. 
+                        Ein hoher Servicegrad zeichnet uns aus und deshalb können Sie auch in kritischen Situationen innerhalb einer Stunde auf Hilfe zählen, 
+                        z.B. bei Prothesenbruch oder Unfällen.
+                      </p>
+
+                      <p className="text-lg text-gray-500 mt-3 sm:text-start">
+                        Und dieser Servicegedanke erstreckt sich auf viele weitere Bereiche, wie z.B. 
+                        die Möglichkeit zur Finanzierung oder online Termine zu buchen, dem barrierefreien Praxis-Zugang, kostenlosen Parkplätzen, 
+                        lange Öffnungszeiten und vielem mehr.
                       </p>
                     </div>
                   </div>

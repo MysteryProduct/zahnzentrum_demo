@@ -9,7 +9,7 @@ interface ModalProps {
   onClose: (open: boolean) => void
 }
 
-export default function TestModal({ openProp, onClose }: ModalProps) {
+export default function PraxisKonzept({ openProp, onClose }: ModalProps) {
   const [open, setOpen] = useState(openProp)
 
   const handleClose = (value: boolean) => {
