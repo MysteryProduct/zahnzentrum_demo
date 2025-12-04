@@ -4,11 +4,13 @@ import React, { useEffect, useState } from 'react'
 import { ImageType } from '@/app/types/image'
 import Slider from 'react-slick'
 import ChiefDetailSkeleton from '../../Skeleton/ChiefDetail'
+import TestModal from '../../Modal/TestModal'
 import Link from 'next/link'
 
 const Hero = () => {
   const [imageDetail, setimageDetail] = useState<ImageType[]>([])
   const [loading, setLoading] = useState(true)
+  const [open, setOpen] = useState(false)
 
   useEffect(() => {
     const fetchData = async () => {
@@ -55,6 +57,7 @@ const Hero = () => {
                       width={375}
                       height={200}
                       className='inline-block m-auto w-auto'
+                      priority={items.imgSrc === '/images/Home/Startseitenheader-Team.jpg'}
                     />
                   </div>
                 </div>
@@ -95,16 +98,9 @@ const Hero = () => {
               Herzlich willkommen im Zahnzentrum am Kunst-Karree,
             </p>
             <div className='flex flex-col sm:flex-row gap-5 items-center justify-center lg:justify-start'>
-              <Link href='/#menu'>
-                <button className='text-sm font-medium rounded-full text-white py-3 px-8 bg-primary hover:text-primary border border-primary hover:bg-transparent hover:cursor-pointer transition ease-in-out duration-300'>
-                  MEHR ERFAHREN
-                </button>
-              </Link>
-              {/* <Link href='/#reserve'>
-                <button className='text-xl border border-primary rounded-full font-medium py-3 px-8 text-primary hover:text-white hover:bg-primary hover:cursor-pointer transition ease-in-out duration-300'>
-                  Reserve a Table
-                </button>
-              </Link> */}
+              <button onClick={() => setOpen(true)} className='text-sm font-medium rounded-full text-white py-3 px-8 bg-primary hover:text-primary border border-primary hover:bg-transparent hover:cursor-pointer transition ease-in-out duration-300'>
+                MEHR ERFAHREN
+              </button>
             </div>
           </div>
           <div className='lg:col-span-6 flex justify-center-safe relative'>
@@ -127,6 +123,13 @@ const Hero = () => {
           </div>
         </div>
       </div>
+      {open ?
+        <TestModal openProp={open}  onClose={setOpen}/>
+        :
+        null
+      }
+      
+
     </section>
   )
 }
