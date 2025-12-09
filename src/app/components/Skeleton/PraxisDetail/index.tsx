@@ -1,4 +1,4 @@
-const ChiefDetailSkeleton = () => {
+const PraxisDetailSkeleton = () => {
   return (
     <>
       <div>
@@ -24,4 +24,4 @@ const ChiefDetailSkeleton = () => {
   )
 }
 
-export default ChiefDetailSkeleton
+export default PraxisDetailSkeleton

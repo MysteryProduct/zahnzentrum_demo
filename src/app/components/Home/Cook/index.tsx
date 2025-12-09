@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 const Cook = () => {
   return (
-    <section className='relative' id='aboutus'>
+    <section className='relative' id='cook'>
       <div className='container px-4'>
         <div className='absolute right-0 bottom-[-18%] xl:block hidden'>
           <Image

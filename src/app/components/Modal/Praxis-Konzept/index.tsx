@@ -1,9 +1,7 @@
 'use client'
 
 import { Dialog, DialogBackdrop, DialogPanel, DialogTitle } from '@headlessui/react'
-import Image from 'next/image'
-import React, { useEffect, useState } from 'react'
-import { ImageType } from '@/app/types/image'
+import React, { useState } from 'react'
 interface ModalProps {
   openProp: boolean
   onClose: (open: boolean) => void

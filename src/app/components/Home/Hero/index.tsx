@@ -3,11 +3,11 @@ import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
 import { ImageType } from '@/app/types/image'
 import Slider from 'react-slick'
-import ChiefDetailSkeleton from '../../Skeleton/ChiefDetail'
+
 import PraxisKonzept from '../../Modal/Praxis-Konzept'
 import Link from 'next/link'
 import PraxisPhilosophie from '../../Modal/Praxis-Philosophie'
-
+import PraxisDetailSkeleton from '../../Skeleton/PraxisDetail'
 const Hero = () => {
   const [imageDetail, setimageDetail] = useState<ImageType[]>([])
   const [loading, setLoading] = useState(true)
@@ -46,7 +46,7 @@ const Hero = () => {
         <Slider {...settings}>
           {loading
             ? Array.from({ length: 3 }).map((_, i) => (
-              <ChiefDetailSkeleton key={i} />
+              <PraxisDetailSkeleton key={i} />
             ))
             : imageDetail.map((items, i) => (
               <div key={i}>
