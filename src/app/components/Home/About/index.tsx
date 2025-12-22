@@ -17,7 +17,7 @@ const About = () => {
         <div className='grid grid-cols-1 lg:grid-cols-12 my-16 space-x-5'>
           <div className='lg:col-span-6 flex lg:justify-start justify-center'>
             <Image
-              src='/images/Cook/2020-10-30-Camlog-105.png'
+              src='/images/hero/img-hero3.PNG'
               alt='nothing'
               width={450}
               height={608}
