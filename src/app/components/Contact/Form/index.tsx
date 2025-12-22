@@ -1,6 +1,8 @@
 'use client'
 import React from 'react'
 import { useState, useEffect } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMapMarkerAlt,faPhone,faClock,faParking,faFileText } from '@fortawesome/free-solid-svg-icons'
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -76,14 +78,98 @@ const ContactForm = () => {
       })
   }
   return (
-    <section id='reserve' className='scroll-mt-20'>
+    <section id='kontakt' className='scroll-mt-20'>
       <div className='container'>
-        <p className='text-primary text-lg font-normal mb-3 tracking-widest uppercase text-center'>
-            reservation
-          </p>
+        <p className='text-primary text-2xl font-normal mb-3 tracking-widest uppercase text-center'>
+          Zahnzentrum am Kunst-Karree
+        </p>
         <h2 className='mb-9 font-bold tracking-tight text-center'>
-          Dine With Us
+          Herzlich willkommen
         </h2>
+        <div className='mb-12'>
+          <p className='text-normal text-xl'>
+            Ihr Zahnarzt hat Sie für einen oralchirurgischen oder implantologischen Eingriff an uns überwiesen?
+            Oder möchten Sie einen Termin zur Vorsorge, Kontrolle, bzw.
+            einen ästhetischen Eingriff? Sie sind in jedem Fall richtig bei uns!
+          </p>
+          <p className='text-normal text-xl mt-6'>
+            Wir sind eine Bestellpraxis. Das bedeutet, dass wir Termine sehr exakt vergeben und Sie nie länger als maximal 10 Minuten warten müssen.
+            Pünktlichkeit auf beiden Seiten ist hierfür die Voraussetzung.
+            Kommen Sie zu Ihrem ersten Termin gerne eine Viertelstunde früher, damit wir alle Formalitäten in Ruhe erledigen können.
+          </p>
+          <p className='text-normal text-xl mt-6 mb-15'>
+            Wir freuen uns auf Ihren Besuch im Zahnzentrum am Kunst-Karree!
+          </p>
+        </div>
+        <div className='mb-10 grid grid-cols-1 md:grid-cols-3 gap-8'>
+          <div className="grid grid-cols-12 gap-4">
+            <div className="col-span-1">
+              <FontAwesomeIcon icon={faMapMarkerAlt} className='text-primary text-3xl lg:text-2xl inline-block' />
+            </div>
+            <div className="col-start-2 col-end-12">
+              <p className='text-lg font-bold'>Zahnzentrum am Kunst-Karree</p>
+              <p className='text-lg'>Marie-Curie-Straße 5 21337 Lüneburg</p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-12 gap-4">
+            <div className="col-span-1">
+              <FontAwesomeIcon icon={faPhone} className='text-primary text-3xl lg:text-2xl inline-block' />
+            </div>
+            <div className="col-start-2 col-end-12">
+              <p className='text-lg font-bold'>	Kontakt aufnehmen</p>
+              <p className='text-lg text-primary'>04131 400640</p>
+              <p className='text-normal text-primary'>info@zahnzentrum-am-kunstkarree.de</p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-12 gap-4 grid-rows-2 row-span-2">
+            <div className="col-span-1">
+              <FontAwesomeIcon icon={faClock} className='text-primary text-3xl lg:text-2xl inline-block' />
+            </div>
+            <div className="col-start-2 col-end-12 row-span-2">
+              <p className='text-lg font-bold'>Öffnungszeiten</p>
+              <table className='text-lg w-full mt-2 mb-4'>
+                <tbody>
+                  <tr className='border-b'>
+                    <td className='pr-4'>Mo. und Mi.</td>
+                    <td>8 bis 18 Uhr</td>
+                  </tr>
+                  <tr className='border-b'>
+                    <td className='pr-4'>Di. und Do.</td>
+                    <td>8 bis 20 Uhr</td>
+                  </tr>
+                  <tr className='border-b'>
+                    <td className='pr-4'>Fr.</td>
+                    <td>8 bis 16 Uhr</td>
+                  </tr>
+                </tbody>  
+              </table>
+              <p className='text-lg'>Außerhalb dieser Zeiten nur nach persönlicher Absprache</p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-12 gap-4">
+            <div className="col-span-1">
+              <FontAwesomeIcon icon={faParking} className='text-primary text-3xl lg:text-2xl inline-block' />
+            </div>
+            <div className="col-start-2 col-end-12">
+              <p className='text-lg font-bold'>	Entspannt parken</p>
+              <p className='text-lg'>Kostenlose Parkplätze</p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-12 gap-4">
+            <div className="col-span-1">
+              <FontAwesomeIcon icon={faFileText} className='text-primary text-3xl lg:text-2xl inline-block' />
+            </div>
+            <div className="col-start-2 col-end-12">
+              <p className='text-lg font-bold'>Zeit sparen</p>
+              <p className='text-lg text-primary'>Anamnesebogen ausfüllen</p>
+              <a href='/Zahnzentrum_am_Kunstkarree_Anamnesebogen.pdf' download className='text-lg text-primary inline-block hover:underline'>Sie sind Neu-Patient?</a>
+            </div>
+          </div>
+        </div>
         <div className='relative border px-6 py-2 rounded-3xl'>
           <form
             onSubmit={handleSubmit}
@@ -91,7 +177,7 @@ const ContactForm = () => {
             <div className='sm:flex gap-6 w-full'>
               <div className='mx-0 my-2.5 flex-1'>
                 <label htmlFor='fname' className='pb-3 inline-block text-base'>
-                  Full Name
+                  Vollständiger Name
                 </label>
                 <input
                   id='fname'
@@ -105,7 +191,7 @@ const ContactForm = () => {
               </div>
               <div className='mx-0 my-2.5 flex-1'>
                 <label htmlFor='email' className='pb-3 inline-block text-base'>
-                  Email Address
+                  E-Mail *
                 </label>
                 <input
                   id='email'
@@ -121,7 +207,7 @@ const ContactForm = () => {
                 <label
                   htmlFor='Phnumber'
                   className='pb-3 inline-block text-base'>
-                  Phone Number
+                  Telefon
                 </label>
                 <input
                   id='Phnumber'
@@ -134,60 +220,13 @@ const ContactForm = () => {
                 />
               </div>
             </div>
-            <div className='sm:flex gap-6 w-full'>              
-              <div className='mx-0 my-2.5 flex-1'>
-                <label htmlFor='email' className='pb-3 inline-block text-base'>
-                  Outlet
-                </label>
-                <select
-                  name='outlet'
-                  id='outlet'
-                  value={formData.outlet}
-                  onChange={handleChange}
-                  className='w-full text-base px-4 rounded-2xl py-2.5 border-solid border transition-all duration-500 focus:border-primary focus:outline-0'>
-                  <option value=''>Choose the Outlet</option>
-                  <option value='Downtown LA'>Downtown LA</option>
-                  <option value='Hollywood'>Hollywood</option>
-                  <option value='West Hollywood'>West Hollywood</option>
-                  <option value='Beverly Hills'>Beverly Hills</option>
-                  <option value='Santa Monica'>Santa Monica</option>
-                  <option value='Venice Beach'>Venice Beach</option>
-                </select>
-              </div>
-              <div className='mx-0 my-2.5 flex-1'>
-                <label htmlFor='fname' className='pb-3 inline-block text-base'>
-                  Time
-                </label>
-                <input
-                  id='time'
-                  type='time'
-                  name='time'
-                  value={formData.time}
-                  onChange={handleChange}
-                  className='w-full text-base px-4 rounded-2xl py-2.5 border-solid border transition-all duration-500 focus:border-primary focus:outline-0'
-                />
-              </div>
-              <div className='mx-0 my-2.5 flex-1'>
-                <label htmlFor='email' className='pb-3 inline-block text-base'>
-                  NO. Of People
-                </label>
-                <input
-                  id='people'
-                  type='number'
-                  name='people'
-                  value={formData.people}
-                  onChange={handleChange}
-                  placeholder='2'
-                  className='w-full text-base px-4 rounded-2xl py-2.5 border-solid border transition-all duration-500 focus:border-primary focus:outline-0'
-                />
-              </div>
-            </div>
+            
             <div className='sm:flex gap-3 w-full'>
-              
+
             </div>
             <div className='w-full mx-0 my-2.5 flex-1'>
               <label htmlFor='message' className='text-base inline-block'>
-                Message
+                Ihre Nachricht
               </label>
               <textarea
                 id='message'
@@ -202,11 +241,10 @@ const ContactForm = () => {
                 type='submit'
                 disabled={!isFormValid || loader}
                 className={`border leading-none px-6 text-lg font-medium py-4 rounded-full 
-                    ${
-                      !isFormValid || loader
-                        ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
-                        : 'bg-primary border-primary text-white hover:bg-transparent hover:text-primary cursor-pointer'
-                    }`}>
+                    ${!isFormValid || loader
+                    ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
+                    : 'bg-primary border-primary text-white hover:bg-transparent hover:text-primary cursor-pointer'
+                  }`}>
                 Submit
               </button>
             </div>

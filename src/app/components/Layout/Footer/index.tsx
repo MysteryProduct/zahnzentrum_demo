@@ -28,64 +28,29 @@ const Footer: FC = () => {
       <div className='container'>
         <div className='grid grid-cols-1 sm:grid-cols-6 lg:gap-20 md:gap-24 sm:gap-12 gap-12 pb-10'>
           <div className='col-span-2'>
-            <Logo />
-            <p className='text-sm font-medium text-grey my-5 max-w-70%'>
-              Open an account in minutes, get full financial control for much
-              longer.
-            </p>
-            <div className='flex gap-6 items-center'>
-              <Link
-                href='#'
-                className='group bg-white hover:bg-primary rounded-full shadow-xl p-3'>
-                <Icon
-                  icon='fa6-brands:facebook-f'
-                  width='16'
-                  height='16'
-                  className=' group-hover:text-white text-black'
-                />
-              </Link>
-              <Link
-                href='#'
-                className='group bg-white hover:bg-primary rounded-full shadow-xl p-3'>
-                <Icon
-                  icon='fa6-brands:instagram'
-                  width='16'
-                  height='16'
-                  className=' group-hover:text-white text-black'
-                />
-              </Link>
-              <Link
-                href='#'
-                className='group bg-white hover:bg-primary rounded-full shadow-xl p-3'>
-                <Icon
-                  icon='fa6-brands:x-twitter'
-                  width='16'
-                  height='16'
-                  className=' group-hover:text-white text-black'
-                />
-              </Link>
-            </div>
-          </div>
-          <div className='col-span-2'>
-            <div className='flex gap-20'>
-              {footerlink.map((product, i) => (
-                <div key={i} className='group relative col-span-2'>
-                  <p className='text-black text-xl font-semibold mb-9'>
-                    {product.section}
-                  </p>
-                  <ul>
-                    {product.links.map((item, i) => (
-                      <li key={i} className='mb-3'>
-                        <Link
-                          href={item.href}
-                          className='text-black/60 hover:text-black text-base font-normal mb-6'>
-                          {item.label}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
+            <div className='flex gap-6 items-center' id="google_maps">
+              <div className='w-full max-w-xs sm:max-w-sm lg:max-w-md'>
+                <div className='overflow-hidden rounded'>
+                  <iframe
+                    src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2386.8757335045243!2d10.4125967!3d53.2559271!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b1ddc34742d01d%3A0x34c88f2b602a1722!2sMarie-Curie-Stra%C3%9Fe%205%2C%2021337%20L%C3%BCneburg%2C%20Germany!5e0!3m2!1sen!2sth!4v1765986281614!5m2!1sen!2sth'
+                    width='100%'
+                    height='350'
+                    loading='lazy'
+                    referrerPolicy='no-referrer-when-downgrade'
+                    title='Zahnzentrum am Kunst-Karree Location'
+                    className='w-full h-60 sm:h-50 md:h-60 rounded'
+                  />
                 </div>
-              ))}
+
+                <a
+                  href='https://www.google.de/maps/place/Marie-Curie-Stra%C3%9Fe+5,+21337+L%C3%BCneburg,+Germany/@53.2559271,10.4125967,17z/data=!4m6!3m5!1s0x47b1ddc34742d01d:0x34c88f2b602a1722!8m2!3d53.2559271!4d10.4147907!16s%2Fg%2F11bw3hfwxg?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='text-sm text-black/60 hover:text-primary mt-2 inline-block'
+                  aria-label='Open location in Google Maps'>
+                  Open in Google Maps
+                </a>
+              </div>
             </div>
           </div>
           <div className='col-span-2 sm:col-span-6 md:col-span-2'>
@@ -95,21 +60,21 @@ const Footer: FC = () => {
                   icon='solar:point-on-map-perspective-bold'
                   className='text-primary text-3xl lg:text-2xl inline-block me-2'
                 />
-                <p className='text-black text-base'>
-                  925 Filbert Street Pennsylvania 18072
+                <p className='text-black/60 text-base'>
+                  Zahnzentrum am Kunst-Karree <br></br>Marie-Curie-Straße 5 21337 Lüneburg
                 </p>
               </div>
-              <Link href='tel:+1(909) 235-9814'>
+              <a href='tel:04131 400640'>
                 <div className='flex'>
                   <Icon
                     icon='solar:phone-bold'
                     className='text-primary text-3xl lg:text-2xl inline-block me-2'
                   />
                   <p className='text-black/60 hover:text-black text-base'>
-                    +1(909) 235-9814
+                    04131 400640
                   </p>
                 </div>
-              </Link>
+              </a>
               <Link href='/'>
                 <div className='flex'>
                   <Icon
@@ -117,25 +82,48 @@ const Footer: FC = () => {
                     className='text-primary text-3xl lg:text-2xl inline-block me-2'
                   />
                   <p className='text-black/60 hover:text-black text-base'>
-                    info@gmail.com
+                    info@zahnzentrum-am-kunstkarree.de
                   </p>
                 </div>
               </Link>
             </div>
           </div>
+
+          <div className='col-span-2 sm:col-span-6 md:col-span-2'>
+            
+              <p className='text-base text-black/60' >Öffnungszeiten</p>
+              <table className='text-base text-black/60 w-full mt-2 mb-4'>
+                <tbody>
+                  <tr className=''>
+                    <td className='pr-4'>Mo. und Mi.</td>
+                    <td>8 bis 18 Uhr</td>
+                  </tr>
+                  <tr className=''>
+                    <td className='pr-4'>Di. und Do.</td>
+                    <td>8 bis 20 Uhr</td>
+                  </tr>
+                  <tr className=''>
+                    <td className='pr-4'>Fr.</td>
+                    <td>8 bis 16 Uhr</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p className='text-base text-black/60'>Außerhalb dieser Zeiten nur nach persönlicher Absprache</p>
+            
+          </div>
         </div>
         <div className='border-t border-grey/15 py-5 flex flex-col sm:flex-row justify-between sm:items-center gap-5'>
           <p className='text-sm text-black/70'>
-            @2025 - Chef's kitchen. All Rights Reserved by{' '}
-            <Link
+            © 2025 Zahnzentrum am Kunst-Karree
+            {/* <Link
               href='https://getnextjstemplates.com/'
               className='hover:text-primary hover:underline'>
               GetNextjsTemplates
-            </Link>
+            </Link> */}
           </p>
 
           <div className=''>
-            <Link
+            {/* <Link
               href='#'
               className='text-sm text-black/70 px-5 border-r border-grey/15 hover:text-primary hover:underline'>
               Privacy policy
@@ -144,7 +132,7 @@ const Footer: FC = () => {
               href='#'
               className='text-sm text-black/70 px-5 hover:text-primary hover:underline'>
               Terms & conditions
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>

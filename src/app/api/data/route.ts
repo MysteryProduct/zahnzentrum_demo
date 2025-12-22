@@ -3,20 +3,36 @@ import { NextResponse } from 'next/server'
 import { HeaderItem } from '@/app/types/menu'
 import { FeaturesType } from '@/app/types/features'
 import { ExpertChiefType } from '@/app/types/expertchief'
-import { GalleryImagesType } from '@/app/types/galleryimage'
 import { FooterLinkType } from '@/app/types/footerlink'
 import { FullMenuType } from '@/app/types/fullmenu'
 import { ImageType } from '@/app/types/image'
 import { PraxisTeamType } from '@/app/types/praxisteam'
+import { PatientType } from '@/app/types/patient'
 const HeaderData: HeaderItem[] = [
   { label: 'Start', href: '/' },
   { label: 'About Us', href: '/#aboutus' },
   { label: 'Praxis Team', href: '/#praxisteam' },
-  { label: 'Menu', href: '/#menu' },
+  { label: 'Kontakt', href: '/#kontakt' },
   // { label: 'Reserve Table', href: '/#reserve' },
   { label: 'Docs', href: '/documentation' },
 ]
-
+const PatientData: PatientType[] = [
+  {
+    title : 'Hoher Servicegrad',
+    description : 'Durch das angegliederte Labor können wir innerhalb einer Stunde Zähne wiederherstellen oder beim Bruch einer Prothese sofort erste Hilfe leisten. Und nach großen Eingriffen ist bei uns ein Anruf Chefsache!',
+    imgSrc : '/images/Patien/Hoher-Service.svg'
+  },
+  {
+    title : 'Digitale Technik', 
+    description : 'Zähne präparieren, scannen, designen, fräsen und einsetzen – Dank einem digitalen Praxis-Workflow können wir noch präziser, sicherer und zudem umweltfreundlicher für Sie da sein.',
+    imgSrc : '/images/Patien/Digitale-Technik.svg'
+  },
+  {
+    title : 'Bezahlbare Medizin',
+    description : 'Für uns sind alle Menschen gleich und deshalb spielt auch der Versicherungsstatus keine Rolle. Unser Ziel ist eine hohe zahnmedizinische Versorgung zu vernünftigen Preisen, da uns die Zahngesundheit am Herzen liegt.',
+    imgSrc : '/images/Patien/Bezahlbare-Medizin.svg'
+  },
+]
 const FeaturesData: FeaturesType[] = [
   {
     imgSrc: '/images/Features/Entspannt.svg',
@@ -144,28 +160,6 @@ const imageHomeData: ImageType[] = [
     imgSrc: '/images/Home/Startseite_Header_3.jpg',
   },
 ]
-const GalleryImagesData: GalleryImagesType[] = [
-  {
-    src: '/images/Gallery/foodone.webp',
-    name: 'Caesar Salad(187 Kcal)',
-    price: 35,
-  },
-  {
-    src: '/images/Gallery/foodtwo.webp',
-    name: 'Christmas salad(118 Kcal)',
-    price: 17,
-  },
-  {
-    src: '/images/Gallery/foodthree.webp',
-    name: 'Sauteed mushrooms with pumpkin bowl(238 kcal)',
-    price: 45,
-  },
-  {
-    src: '/images/Gallery/foodfour.webp',
-    name: 'BBQ Chicken Feast Pizza(272 kcal)',
-    price: 27,
-  },
-]
 
 const FullMenuData: FullMenuType[] = [
   {
@@ -235,10 +229,10 @@ export const GET = () => {
     HeaderData,
     FeaturesData,
     ExpertChiefData,
-    GalleryImagesData,
     FullMenuData,
     FooterLinkData,
     imageHomeData,
     PraxisTeamData,
+    PatientData,
   })
 }

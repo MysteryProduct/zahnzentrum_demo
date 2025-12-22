@@ -1,10 +1,10 @@
 import React from 'react'
 import Hero from '@/app/components/Home/Hero'
 import Features from '@/app/components/Home/Features'
-import Gallery from '@/app/components/Home/Gallery'
 import Newsletter from '@/app/components/Home/Newsletter'
 import About from '@/app/components/Home/About'
 import PraxisTeam from '@/app/components/Home/PraxisTeam'
+import Patient from '@/app/components/Home/Patient'
 import { Metadata } from 'next'
 import ContactForm from './components/Contact/Form'
 
@@ -13,11 +13,19 @@ export const metadata: Metadata = {
   description:
     'Zahnmedizin in Lüneburg — Oralchirurgie, Implantologie, Prophylaxe. Willkommen im Zahnzentrum am Kunst-Karree.',
   keywords: ['Zahnzentrum', 'Zahnmedizin', 'Oralchirurgie', 'Implantologie', 'Lüneburg'],
+  alternates: {
+    canonical: process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
   openGraph: {
     title: 'Zahnzentrum am Kunst-Karree',
     description:
       'Zahnmedizin in Lüneburg — Oralchirurgie, Implantologie, Prophylaxe. Willkommen im Zahnzentrum am Kunst-Karree.',
-    url: 'https://example.com',
+    url: process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000',
+    locale: 'de-DE',
     images: [
       {
         url: '/images/hero/img-hero2.png',
@@ -43,9 +51,9 @@ export default function Home() {
       <Features />
       <About />
       <PraxisTeam />
-      <Gallery />
+      <Patient />
       <ContactForm />
-      <Newsletter />
+      {/* <Newsletter /> */}
     </main>
   )
 }
