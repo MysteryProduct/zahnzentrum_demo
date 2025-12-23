@@ -42,7 +42,7 @@ const Hero = () => {
   }
   return (
     <section id='home-section' className='bg-gray-50'>
-      <div className='container xl:pt-7 pt-16'>
+      <div className='container xl:pt-7 pt-10'>
         <Slider {...settings}>
           {loading
             ? Array.from({ length: 3 }).map((_, i) => (
@@ -55,9 +55,9 @@ const Hero = () => {
                     <Image
                       src={items.imgSrc}
                       alt='gaby'
-                      width={375}
+                      width={475}
                       height={200}
-                      className='inline-block m-auto w-auto'
+                      className='inline-block m-auto w-auto sm:w-full'
                       priority={items.imgSrc === '/images/Home/Startseitenheader-Team.jpg'}
                     />
                   </div>

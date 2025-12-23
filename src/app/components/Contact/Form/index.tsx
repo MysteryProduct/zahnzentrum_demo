@@ -80,10 +80,10 @@ const ContactForm = () => {
   return (
     <section id='kontakt' className='scroll-mt-20'>
       <div className='container'>
-        <p className='text-primary text-2xl font-normal mb-3 tracking-widest uppercase text-center'>
+        <p className='text-primary text-lg lg:text-2xl font-normal mb-3 tracking-widest uppercase text-center'>
           Zahnzentrum am Kunst-Karree
         </p>
-        <h2 className='mb-9 font-bold tracking-tight text-center'>
+        <h2 className='mb-9 font-bold tracking-tight text-center text-lg lg:text-2xl'>
           Herzlich willkommen
         </h2>
         <div className='mb-12'>
@@ -106,7 +106,7 @@ const ContactForm = () => {
             <div className="col-span-1">
               <FontAwesomeIcon icon={faMapMarkerAlt} className='text-primary text-3xl lg:text-2xl inline-block' />
             </div>
-            <div className="col-start-2 col-end-12">
+            <div className="col-start-3 col-end-12">
               <p className='text-lg font-bold'>Zahnzentrum am Kunst-Karree</p>
               <p className='text-lg'>Marie-Curie-Straße 5 21337 Lüneburg</p>
             </div>
@@ -116,7 +116,7 @@ const ContactForm = () => {
             <div className="col-span-1">
               <FontAwesomeIcon icon={faPhone} className='text-primary text-3xl lg:text-2xl inline-block' />
             </div>
-            <div className="col-start-2 col-end-12">
+            <div className="col-start-3 col-end-12">
               <p className='text-lg font-bold'>	Kontakt aufnehmen</p>
               <p className='text-lg text-primary'>04131 400640</p>
               <p className='text-normal text-primary'>info@zahnzentrum-am-kunstkarree.de</p>
@@ -127,7 +127,7 @@ const ContactForm = () => {
             <div className="col-span-1">
               <FontAwesomeIcon icon={faClock} className='text-primary text-3xl lg:text-2xl inline-block' />
             </div>
-            <div className="col-start-2 col-end-12 row-span-2">
+            <div className="col-start-3 col-end-12 row-span-2">
               <p className='text-lg font-bold'>Öffnungszeiten</p>
               <table className='text-lg w-full mt-2 mb-4'>
                 <tbody>
@@ -153,7 +153,7 @@ const ContactForm = () => {
             <div className="col-span-1">
               <FontAwesomeIcon icon={faParking} className='text-primary text-3xl lg:text-2xl inline-block' />
             </div>
-            <div className="col-start-2 col-end-12">
+            <div className="col-start-3 col-end-12">
               <p className='text-lg font-bold'>	Entspannt parken</p>
               <p className='text-lg'>Kostenlose Parkplätze</p>
             </div>
@@ -163,7 +163,7 @@ const ContactForm = () => {
             <div className="col-span-1">
               <FontAwesomeIcon icon={faFileText} className='text-primary text-3xl lg:text-2xl inline-block' />
             </div>
-            <div className="col-start-2 col-end-12">
+            <div className="col-start-3 col-end-12">
               <p className='text-lg font-bold'>Zeit sparen</p>
               <p className='text-lg text-primary'>Anamnesebogen ausfüllen</p>
               <a href='/Zahnzentrum_am_Kunstkarree_Anamnesebogen.pdf' download className='text-lg text-primary inline-block hover:underline'>Sie sind Neu-Patient?</a>

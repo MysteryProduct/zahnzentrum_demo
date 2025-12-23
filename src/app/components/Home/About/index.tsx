@@ -15,7 +15,7 @@ const About = () => {
           />
         </div> */}
         <div className='grid grid-cols-1 lg:grid-cols-12 my-16 space-x-5'>
-          <div className='lg:col-span-6 flex lg:justify-start justify-center'>
+          <div className='lg:col-span-6 flex lg:justify-start justify-center sm:mb-10'>
             <Image
               src='/images/hero/img-hero3.PNG'
               alt='nothing'

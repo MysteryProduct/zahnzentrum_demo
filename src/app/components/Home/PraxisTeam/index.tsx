@@ -78,7 +78,7 @@ const PraxisTeam = () => {
     <section className='bg-primary/10' id="praxisteam">
       <div className='container'>
         <div className='text-center'>
-          <p className='text-primary text-lg font-normal mb-3 tracking-widest uppercase'>
+          <p className='text-primary text-lg font-bold mb-3 tracking-widest uppercase'>
             Praxis Team
           </p>
           <p className='font-semibold text-xl'>Unser Team und wir sind gemeinsam für Sie und Ihre Familie da</p>
