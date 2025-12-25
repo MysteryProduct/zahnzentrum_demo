@@ -50,7 +50,7 @@ export default function PraxisTeamModal({ openProp, praxisdata, onClose }: Modal
                                                 <h3 className='font-semibold text-black md:text-lg sm:text-lg lg:text-2xl' >
                                                     {praxisdata.name}
                                                 </h3>
-                                                <h4 className='lg:text-lg md:text-normal sm:text-normal font-normal text-black/50 opacity-50'>
+                                                <h4 className='lg:text-lg md:text-normal sm:text-normal font-normal opacity-50'>
                                                     {praxisdata.profession}
                                                 </h4>
                                             </div>

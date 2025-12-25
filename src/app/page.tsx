@@ -1,13 +1,12 @@
 import React from 'react'
 import Hero from '@/app/components/Home/Hero'
 import Features from '@/app/components/Home/Features'
-import Newsletter from '@/app/components/Home/Newsletter'
 import About from '@/app/components/Home/About'
 import PraxisTeam from '@/app/components/Home/PraxisTeam'
 import Patient from '@/app/components/Home/Patient'
 import { Metadata } from 'next'
 import ContactForm from './components/Contact/Form'
-
+import MeisterLabor from '@/app/components/Home/MeisterLabor'
 export const metadata: Metadata = {
   title: 'Zahnzentrum am Kunst-Karree',
   description:
@@ -52,8 +51,8 @@ export default function Home() {
       <About />
       <PraxisTeam />
       <Patient />
+      <MeisterLabor />
       <ContactForm />
-      {/* <Newsletter /> */}
     </main>
   )
 }

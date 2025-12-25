@@ -5,7 +5,6 @@ import { ImageType } from '@/app/types/image'
 import Slider from 'react-slick'
 
 import PraxisKonzept from '../../Modal/Praxis-Konzept'
-import Link from 'next/link'
 import PraxisPhilosophie from '../../Modal/Praxis-Philosophie'
 import PraxisDetailSkeleton from '../../Skeleton/PraxisDetail'
 const Hero = () => {

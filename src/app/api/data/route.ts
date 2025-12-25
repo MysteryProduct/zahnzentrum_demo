@@ -13,7 +13,6 @@ const HeaderData: HeaderItem[] = [
   { label: 'About Us', href: '/#aboutus' },
   { label: 'Praxis Team', href: '/#praxisteam' },
   { label: 'Kontakt', href: '/#kontakt' },
-  // { label: 'Reserve Table', href: '/#reserve' },
   { label: 'Docs', href: '/documentation' },
 ]
 const PatientData: PatientType[] = [
