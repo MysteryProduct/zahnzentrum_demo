@@ -105,7 +105,7 @@ const Header: React.FC = () => {
               />
               +1(909) 235-9814
             </Link> */}
-            <button
+            {/* <button
               className='hidden lg:block text-primary duration-300 bg-primary/15 hover:text-white hover:bg-primary font-medium text-lg py-2 px-6 rounded-full hover:cursor-pointer'
               onClick={() => {
                 setIsSignInOpen(true)
@@ -158,7 +158,7 @@ const Header: React.FC = () => {
                   <SignUp />
                 </div>
               </div>
-            )}
+            )} */}
             <button
               onClick={() => setNavbarOpen(!navbarOpen)}
               className='block lg:hidden p-2 rounded-lg'
