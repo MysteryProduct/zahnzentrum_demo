@@ -21,7 +21,7 @@ export default function MeisterLabor() {
         <section id='meisterlabor-section' className='bg-gray-50'>
             <div className='container xl:pt-7 pt-10'>
                 <Image
-                    src={'/images/Meisterlabor/meister-labor1.jpg'}
+                    src={'/images/MeisterLabor/meisterlabor1.jpg'}
                     alt='Meisterlabor'
                     width={475}
                     height={200}
@@ -43,7 +43,7 @@ export default function MeisterLabor() {
                 <div className='mt-10 grid grid-cols-1 lg:grid-cols-12 items-center gap-5'>
                     <div className='lg:col-span-6 p-3'>
                         <Image
-                            src={'/images/Meisterlabor/meister-labor2.jpg'}
+                            src={'/images/MeisterLabor/meisterlabor2.jpg'}
                             alt='Meisterlabor'
                             width={475}
                             height={200}
@@ -63,7 +63,7 @@ export default function MeisterLabor() {
                 <div className='mt-10 grid grid-cols-1 lg:grid-cols-12 items-center gap-5 mb-10'>
                     <div className='lg:col-span-6 p-3 order-1 lg:order-2'>
                         <Image
-                            src={'/images/Meisterlabor/meister-labor3.webp'}
+                            src={'/images/MeisterLabor/meisterlabor3.webp'}
                             alt='Meisterlabor'
                             width={475}
                             height={200}

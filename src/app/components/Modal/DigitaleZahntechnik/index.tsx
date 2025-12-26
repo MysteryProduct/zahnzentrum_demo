@@ -37,7 +37,7 @@ export default function DigitaleZahntechnik({ openProp, onClose }: ModalProps) {
                                         <div className='my-10 text-center backdrop-blur-md bg-white/50 rounded-3xl'>
                                             <div className='relative'>
                                                 <Image
-                                                    src={'/images/Meisterlabor/DigitaleZahnersatz.jpg'}
+                                                    src={'/images/MeisterLabor/DigitaleZahnersatz.jpg'}
                                                     alt='gaby'
                                                     width={362}
                                                     height={262}

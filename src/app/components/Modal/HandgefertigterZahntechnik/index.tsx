@@ -37,7 +37,7 @@ export default function HandgefertigterZahntechnik({ openProp, onClose }: ModalP
                                         <div className='my-10 text-center backdrop-blur-md bg-white/50 rounded-3xl'>
                                             <div className='relative'>
                                                 <Image
-                                                    src={'/images/Meisterlabor/HandgefertigterZahnersatz.jpg'}
+                                                    src={'/images/MeisterLabor/HandgefertigterZahnersatz.jpg'}
                                                     alt='gaby'
                                                     width={362}
                                                     height={262}
