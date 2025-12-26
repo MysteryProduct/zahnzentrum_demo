@@ -2,8 +2,11 @@
 
 import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
-
+import  HandgefertigterZahntechnik  from '../../Modal/HandgefertigterZahntechnik'
+import DigitaleZahntechnik from '../../Modal/DigitaleZahntechnik'
 export default function MeisterLabor() {
+    const [openHandgefertigter, setOpenHandgefertigter] = useState(false)
+    const [openDigitale, setOpenDigitale] = useState(false)
     useEffect(() => {
         const fetchData = async () => {
             try {
@@ -44,7 +47,8 @@ export default function MeisterLabor() {
                             alt='Meisterlabor'
                             width={475}
                             height={200}
-                            className='inline-block m-auto w-auto sm:w-full rounded-2xl'
+                            className='inline-block m-auto w-auto sm:w-full rounded-2xl hover:scale-110 transition duration-300'
+                            onClick={() => setOpenHandgefertigter(true)}
                         />
                     </div>
                     <div className='lg:col-span-6 p-3 text-center item-center'>
@@ -52,22 +56,19 @@ export default function MeisterLabor() {
                             <h3 className='font-semibold text-black  sm:text-lg md:text-lg lg:text-xl text-primary' >
                                 Handgefertigter Zahnersatz – ein Handwerk mit Tradition
                             </h3>
-                            <button className='mt-4 px-6 py-2 bg-primary text-white hover:bg-primary/90 transition text-lg'>Mehr Erfahren</button>
+                            <button onClick={() => setOpenHandgefertigter(true)} className='mt-4 px-6 py-2 bg-primary text-white hover:bg-primary/90 transition text-lg'>Mehr Erfahren</button>
                         </div>
                     </div>
                 </div>
-                {/* <div className="grid grid-cols-2">
-                    <div className="order-1">Column A (Appears 2nd)</div>
-                    <div className="order-2">Column B (Appears 1st)</div>
-                </div> */}
-                <div className='mt-10 grid grid-cols-1 lg:grid-cols-12 items-center gap-5'>
+                <div className='mt-10 grid grid-cols-1 lg:grid-cols-12 items-center gap-5 mb-10'>
                     <div className='lg:col-span-6 p-3 order-1 lg:order-2'>
                         <Image
                             src={'/images/Meisterlabor/meister-labor3.webp'}
                             alt='Meisterlabor'
                             width={475}
                             height={200}
-                            className='inline-block m-auto w-auto sm:w-full rounded-2xl'
+                            className='inline-block m-auto w-auto sm:w-full rounded-2xl hover:scale-110 transition duration-300'
+                            onClick={() => setOpenDigitale(true)}
                         />
                     </div>
                     <div className='lg:col-span-6 p-3 text-center item-center order-2 lg:order-1'>
@@ -75,11 +76,24 @@ export default function MeisterLabor() {
                             <h3 className='font-semibold text-black  sm:text-lg md:text-lg lg:text-xl text-primary' >
                                 Digital erstellter Zahnersatz – Innovative Technik mit vielen Vorteilen
                             </h3>
-                            <button className='mt-4 px-6 py-2 bg-primary text-white hover:bg-primary/90 transition text-lg'>Mehr Erfahren</button>
+                            <button onClick={() => setOpenDigitale(true)} className='mt-4 px-6 py-2 bg-primary text-white hover:bg-primary/90 transition text-lg'>Mehr Erfahren</button>
                         </div>
                     </div>
                 </div>
             </div>
+
+            {openHandgefertigter && (
+                <HandgefertigterZahntechnik
+                    openProp={openHandgefertigter}            
+                    onClose={setOpenHandgefertigter}
+                />
+            )}
+            {openDigitale && (
+                <DigitaleZahntechnik
+                    openProp={openDigitale}
+                    onClose={setOpenDigitale}
+                />
+            )}
         </section>
     )
 }
