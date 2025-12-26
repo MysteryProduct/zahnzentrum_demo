@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     locale: 'de-DE',
     images: [
       {
-        url: '/images/hero/img-hero2.png',
+        url: `${process.env.NEXT_PUBLIC_SITE_URL}/images/hero/img-hero2.png`,
         alt: 'Zahnzentrum Hero',
         width: 1200,
         height: 628,
