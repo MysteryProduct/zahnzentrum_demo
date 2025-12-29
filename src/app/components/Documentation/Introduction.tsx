@@ -5,7 +5,6 @@ import reactImg from '/public/images/documentation/Categories=React.svg'
 import tailwindImg from '/public/images/documentation/Categories=Tailwind.svg'
 import nextauthImg from '/public/images/documentation/nextauth.png'
 import typescriptImg from '/public/images/documentation/Categories=Typescript.svg'
-// import axiosImg from "/public/images/documentation/axios.svg";
 import { Icon } from '@iconify/react/dist/iconify.js'
 import { useState } from 'react'
 import { DocNavigation } from './DocNavigation'
@@ -54,12 +53,13 @@ export const Introduction = () => {
           />
         )}
 
-        <div className='flex item-center justify-between'>
-          <h3 className=' text-2xl mt-4 font-semibold mb-6 text-black'>
+        <div className='flex item-center justify-between mt-10 lg:mt-0'>
+          <h3 className=' text-2xl font-semibold mb-6 text-black'>
             Pacakge Versions
           </h3>
-          <button onClick={() => setDocNavbarOpen(true)} className='p-0'>
-            {' '}
+          
+          <button  onClick={() => setDocNavbarOpen(true)} className='rounded-md hover:cursor-pointer duration-300' aria-label='Toggle mobile menu'>
+            {''}
             <Icon icon='gg:menu-right' className='text-3xl lg:hidden block' />
           </button>
         </div>
@@ -113,9 +113,9 @@ export const Introduction = () => {
             aria-label='Close mobile menu'>
             <svg
               xmlns='http://www.w3.org/2000/svg'
-              width='24'
-              height='24'
-              viewBox='0 0 24 24'
+              width='30'
+              height='30'
+              viewBox='0 0 30 30'
               className='dark:text-black'>
               <path
                 fill='none'
