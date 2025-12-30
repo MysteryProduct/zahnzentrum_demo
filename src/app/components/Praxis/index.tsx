@@ -2,6 +2,8 @@
 import { PraxisNavigation } from './PraxisNavigation' 
 import {Vorsorge} from './Vorsorge'
 import { Aesthetik } from './Aesthetik'
+import { Zahnersatz } from './Zahnersatz'
+import { Zahnerhalt } from './Zahnerhalt'
 export const Praxis = () => {
   return (
     <div className=''>
@@ -13,6 +15,8 @@ export const Praxis = () => {
           <div className='lg:col-span-9 col-span-12'>
             <Vorsorge />
             <Aesthetik />
+            <Zahnersatz />
+            <Zahnerhalt />
           </div>
         </div>
       </div>

@@ -10,7 +10,7 @@ export const Aesthetik = () => {
     const [openVeneers, setOpenVeneers] = useState(false);
     return (
         <>
-            <div className='pb-10 md:scroll-m-[180px] scroll-m-28' id='aesthetik'>
+            <div className='md:scroll-m-[180px] scroll-m-28' id='aesthetik'>
                 <h3 className=' text-black text-2xl font-semibold mt-8'>Ästhetische Zahnmedizin</h3>
                 <p className='text-black/70 font-medium text-lg'>Für ein bezauberndes Lächeln</p>
                 <div className='mt-5'>
